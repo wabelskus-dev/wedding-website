@@ -405,57 +405,14 @@ dd {
   box-shadow: var(--shadow);
 }
 
-.map-card svg {
+.map-card img {
   display: block;
   width: 100%;
 }
 
-.water {
-  fill: #d9ebe7;
-}
-
-.island {
-  fill: #efe1cf;
-  stroke: #b69775;
-  stroke-width: 3;
-}
-
-.coast,
-.road,
-.ridge {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.coast {
-  stroke: #87aaa5;
-  stroke-width: 9;
-}
-
-.road {
-  stroke: #c8aa83;
-  stroke-width: 4;
-  stroke-dasharray: 12 12;
-}
-
-.ridge {
-  stroke: #8da07d;
-  stroke-width: 6;
-  opacity: 0.75;
-}
-
-.marker circle {
-  fill: var(--olive);
-  stroke: var(--warm-white);
-  stroke-width: 5;
-}
-
-.marker text {
-  fill: var(--deep-green);
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-weight: 800;
+.ceremony-map-card img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-grid {
@@ -627,10 +584,6 @@ figure {
 
   .map-card {
     border-radius: 22px;
-  }
-
-  .marker text {
-    font-size: 30px;
   }
 
   .gallery-grid {
