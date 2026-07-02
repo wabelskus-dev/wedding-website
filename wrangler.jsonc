@@ -1,7 +1,9 @@
 {
   "name": "wedding-website",
+  "main": "src/worker.js",
   "compatibility_date": "2026-07-01",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS"
   }
 }
