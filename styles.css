@@ -204,6 +204,21 @@ h2 {
   align-self: end;
 }
 
+.welcome-detail {
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: min(520px, 100%);
+  margin-top: clamp(18px, 4vw, 34px);
+}
+
+.welcome-detail img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
 .intro-copy p,
 .section-heading p,
 .feature-card p,
@@ -480,19 +495,6 @@ figure {
   height: 100%;
   min-height: inherit;
   object-fit: cover;
-}
-
-figcaption {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  padding: 8px 12px;
-  color: var(--deep-green);
-  background: rgba(255, 253, 248, 0.78);
-  border-radius: 999px;
-  font-size: 0.74rem;
-  font-weight: 800;
-  text-transform: uppercase;
 }
 
 .scripture {
