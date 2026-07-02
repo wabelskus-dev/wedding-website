@@ -171,6 +171,7 @@ h1 {
   margin-bottom: 16px;
   color: var(--warm-white);
   font-size: clamp(5rem, 18vw, 13rem);
+  font-weight: 400;
   line-height: 0.78;
 }
 
@@ -185,7 +186,7 @@ h1 {
 .section-wrap {
   width: min(1120px, calc(100% - 36px));
   margin: 0 auto;
-  padding: clamp(62px, 10vw, 112px) 0;
+  padding: clamp(46px, 7vw, 82px) 0;
 }
 
 .intro {
@@ -242,7 +243,7 @@ h2 {
 
 .centered {
   max-width: 780px;
-  margin: 0 auto 34px;
+  margin: 0 auto 26px;
   text-align: center;
 }
 
@@ -312,7 +313,7 @@ dt,
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.85fr);
   gap: clamp(22px, 5vw, 58px);
   align-items: center;
-  padding: clamp(34px, 7vw, 72px);
+  padding: clamp(28px, 5vw, 58px);
   background: #efe3d3;
   border-radius: 32px;
 }
@@ -356,7 +357,7 @@ dd {
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: clamp(18px, 5vw, 44px);
-  padding: 26px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -457,7 +458,7 @@ figure {
 .scripture {
   width: min(920px, calc(100% - 36px));
   margin: 0 auto;
-  padding: clamp(82px, 12vw, 132px) 0;
+  padding: clamp(46px, 7vw, 82px) 0;
   text-align: center;
 }
 
@@ -567,8 +568,20 @@ figure {
   }
 
   .hero {
-    min-height: 88svh;
-    padding-inline: 18px;
+    min-height: 82svh;
+    align-items: start;
+    padding: 116px 18px 44px;
+  }
+
+  h1 {
+    margin-bottom: 12px;
+    font-size: 4.85rem;
+    font-style: italic;
+    line-height: 0.86;
+  }
+
+  .hero-content {
+    max-width: 420px;
   }
 
   .hero-shade {
