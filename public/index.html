@@ -5,133 +5,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Bri and Liam's elegant tropical wedding website with celebration details, travel notes, and RSVP information."
+      content="Bri and Liam's intimate wedding weekend on Kauai's North Shore."
     >
-    <title>Bri & Liam</title>
+    <title>Bri & Liam | North Shore Kauai</title>
+
+    <!-- Fonts: update these Google Fonts links if you want a different typography direction. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="Wedding site navigation">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
       <a class="brand" href="#top" aria-label="Bri and Liam home">Bri & Liam</a>
-      <nav>
-        <a href="#details">Details</a>
-        <a href="#schedule">Weekend</a>
-        <a href="#travel">Travel</a>
-        <a class="nav-rsvp" href="#rsvp">RSVP</a>
+      <nav aria-label="Primary navigation">
+        <a href="#ceremony">Ceremony</a>
+        <a href="#weekend">Weekend</a>
+        <a href="#map">Map</a>
+        <a href="#kauai">Kauai Notes</a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img
-          src="assets/hero-tropical-boho.png"
-          alt="A tropical oceanfront wedding ceremony with palms, orchids, coral flowers, rattan chairs, and soft golden light."
-        >
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">A tropical wedding celebration</p>
-          <h1 id="hero-title">
-            <span>Bri</span>
-            <span>& Liam</span>
-          </h1>
-          <p class="hero-copy">
-            A minimal island weekend with palms, linen, sea air, and everyone
-            we love.
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <!-- HERO IMAGE: replace assets/kauai-hero.png with your own optimized couple/Kauai photo later. -->
+        <img src="assets/kauai-hero.png" alt="Sunrise on Kauai's North Shore with soft sand, ocean, and green mountains.">
+        <div class="hero-shade"></div>
+        <div class="hero-content reveal">
+          <p class="kicker">A sunrise celebration on the North Shore of Kauai</p>
+          <h1 id="hero-title">Bri & Liam</h1>
+          <!-- WEDDING DATE / LOCATION: update here if plans change. -->
+          <p class="hero-meta">July 10 · Tunnels Beach, North Shore Kauai</p>
+        </div>
+      </section>
+
+      <section class="intro section-wrap reveal" aria-labelledby="intro-title">
+        <p class="eyebrow">Welcome</p>
+        <h2 id="intro-title">We are so grateful to celebrate this moment with the people closest to us.</h2>
+        <div class="intro-copy">
+          <p>
+            We cannot wait to gather on the North Shore of Kauai for a simple,
+            meaningful sunrise ceremony, followed by brunch and time together
+            in one of our favorite places.
           </p>
-          <div class="hero-actions">
-            <a class="button" href="#rsvp">RSVP</a>
-            <p>Date and island details coming soon</p>
-          </div>
+          <p>
+            We are keeping our wedding small and meaningful, surrounded by the
+            people closest to us. Thank you for making the trip to celebrate
+            with us in Kauai.
+          </p>
         </div>
       </section>
 
-      <section class="intro" aria-label="Wedding introduction">
+      <section class="details-panel section-wrap reveal" id="ceremony" aria-labelledby="ceremony-title">
+        <div class="section-heading">
+          <p class="eyebrow">Ceremony</p>
+          <h2 id="ceremony-title">Meet us at sunrise.</h2>
+          <p>
+            Please meet us on the north side of Tunnels Beach just before
+            7:00 AM. Parking can be limited and travel on the North Shore can
+            take longer than expected, so we recommend giving yourself extra
+            time and carpooling when possible.
+          </p>
+        </div>
+
+        <!-- CEREMONY DETAILS: update date, time, address/meeting point, and transportation notes here. -->
+        <div class="info-grid">
+          <article>
+            <span>Date</span>
+            <strong>July 10</strong>
+          </article>
+          <article>
+            <span>Time</span>
+            <strong>7:00 AM</strong>
+            <p>Guests should arrive just before 7:00 AM.</p>
+          </article>
+          <article>
+            <span>Location</span>
+            <strong>Tunnels Beach</strong>
+            <p>North Shore Kauai</p>
+          </article>
+          <article>
+            <span>Meeting Point</span>
+            <strong>North side of Tunnels Beach</strong>
+          </article>
+          <article>
+            <span>Officiant</span>
+            <strong>Bri's best friend</strong>
+          </article>
+          <article>
+            <span>Transportation</span>
+            <strong>Carpooling is encouraged</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature section-wrap reveal" id="brunch" aria-labelledby="brunch-title">
+        <div>
+          <p class="eyebrow">After the ceremony</p>
+          <h2 id="brunch-title">Celebration brunch at 1 Hotel Hanalei Bay.</h2>
+        </div>
+        <!-- BRUNCH DETAILS: update time/location if needed. -->
+        <div class="feature-card">
+          <p class="large-detail">9:15 AM</p>
+          <p>
+            After the ceremony, we will continue the celebration with brunch at
+            1 Hotel Hanalei Bay. All guests are invited to join us.
+          </p>
+        </div>
+      </section>
+
+      <section class="welcome-event reveal" id="welcome" aria-labelledby="welcome-title">
+        <div class="welcome-image">
+          <!-- WELCOME IMAGE: replace this with a real Princeville residence photo later. -->
+          <img src="assets/princeville-lanai.png" alt="A warm Princeville lanai with tropical views and relaxed dinner party details.">
+        </div>
+        <div class="welcome-copy">
+          <p class="eyebrow">July 9 · 2:00 PM</p>
+          <h2 id="welcome-title">Welcome Rehearsal</h2>
+          <!-- WELCOME ADDRESS: replace "address to be added" when ready. -->
+          <p>
+            Join us the day before the ceremony for a relaxed Welcome Rehearsal
+            at a private Princeville residence overlooking the North Shore. We
+            will share the exact address closer to the wedding.
+          </p>
+          <p class="small-note">
+            Expect a casual dinner party, beautiful views, and time together
+            before the early morning ceremony.
+          </p>
+          <dl>
+            <div>
+              <dt>Location</dt>
+              <dd>Private Princeville residence / Belskus residence</dd>
+            </div>
+            <div>
+              <dt>Address</dt>
+              <dd>To be added later</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section-wrap reveal" id="weekend" aria-labelledby="weekend-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">Weekend Schedule</p>
+          <h2 id="weekend-title">A simple rhythm for two days together.</h2>
+        </div>
+        <!-- SCHEDULE: update times and descriptions here. -->
+        <div class="timeline">
+          <article>
+            <span class="date">July 9</span>
+            <div>
+              <p class="time">2:00 PM</p>
+              <h3>Welcome Rehearsal</h3>
+              <p>Casual dinner party at a private residence overlooking Princeville and Hanalei.</p>
+            </div>
+          </article>
+          <article>
+            <span class="date">July 10</span>
+            <div>
+              <p class="time">Just before 7:00 AM</p>
+              <h3>Guest arrival at Tunnels Beach</h3>
+              <p>Please plan extra travel time and meet us on the north side of the beach.</p>
+            </div>
+          </article>
+          <article>
+            <span class="date">July 10</span>
+            <div>
+              <p class="time">7:00 AM</p>
+              <h3>Sunrise ceremony</h3>
+              <p>A small, meaningful ceremony at Tunnels Beach.</p>
+            </div>
+          </article>
+          <article>
+            <span class="date">July 10</span>
+            <div>
+              <p class="time">9:15 AM</p>
+              <h3>Celebration brunch</h3>
+              <p>All guests are invited to 1 Hotel Hanalei Bay.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dress-code section-wrap reveal" aria-labelledby="dress-title">
+        <p class="eyebrow">Dress Code</p>
+        <h2 id="dress-title">Beach-friendly neutrals and florals.</h2>
         <p>
-          Boho, tropical, and quietly chic. Think warm light, orchids, palms,
-          soft linen, a little flamingo pink, and a celebration that feels like
-          an exhale.
+          Think linen, soft earth tones, muted colors, tropical prints, and
+          comfortable shoes for the sand. Please avoid wearing white.
         </p>
-      </section>
-
-      <section class="section" id="details">
-        <div class="section-heading">
-          <p class="section-label">The mood</p>
-          <h2>Relaxed island elegance, edited down to the beautiful essentials.</h2>
-        </div>
-        <div class="detail-grid">
-          <article>
-            <span>Setting</span>
-            <strong>Ocean air, palms, and tropical florals</strong>
-          </article>
-          <article>
-            <span>Style</span>
-            <strong>Boho Hawaiian chic</strong>
-          </article>
-          <article>
-            <span>Dress</span>
-            <strong>Island cocktail, linen welcome</strong>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="schedule">
-        <div class="section-heading">
-          <p class="section-label">The weekend</p>
-          <h2>A slow, sunlit rhythm from welcome drinks to the last song.</h2>
-        </div>
-        <ol class="timeline">
-          <li>
-            <time>Welcome</time>
-            <div>
-              <h3>Drinks under the palms</h3>
-              <p>Easy hellos, a first toast, and the start of the weekend.</p>
-            </div>
-          </li>
-          <li>
-            <time>Ceremony</time>
-            <div>
-              <h3>Vows by the water</h3>
-              <p>A soft, intimate ceremony surrounded by tropical florals.</p>
-            </div>
-          </li>
-          <li>
-            <time>Dinner</time>
-            <div>
-              <h3>Long tables and dancing</h3>
-              <p>Dinner, candlelight, dessert, and a dance floor with no curfew energy.</p>
-            </div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="section travel" id="travel">
-        <div class="section-heading">
-          <p class="section-label">Travel</p>
-          <h2>Stay details, favorite spots, and weekend notes are coming soon.</h2>
-        </div>
-        <p class="section-copy">
-          Once plans are finalized, this space will hold hotel recommendations,
-          transportation notes, things to pack, and places worth lingering.
-        </p>
-      </section>
-
-      <section class="rsvp" id="rsvp">
-        <p class="section-label">RSVP</p>
-        <h2>Formal invitations and RSVP details are on the way.</h2>
         <p>
-          Save this page. We will keep it updated as the celebration gets closer.
+          The ceremony will be on or near the beach, so skip heels or anything
+          difficult to walk in on sand. Dress comfortably for a morning beach
+          ceremony.
         </p>
+      </section>
+
+      <section class="notes section-wrap reveal" id="kauai" aria-labelledby="notes-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">Kauai Notes</p>
+          <h2 id="notes-title">A few helpful notes for the morning.</h2>
+        </div>
+        <div class="note-grid">
+          <article><span>01</span><p>Parking near Tunnels Beach can be limited.</p></article>
+          <article><span>02</span><p>Travel on the North Shore can take longer than expected.</p></article>
+          <article><span>03</span><p>Please carpool when possible and plan to arrive early.</p></article>
+          <article><span>04</span><p>Beach-friendly shoes are recommended.</p></article>
+          <article><span>05</span><p>You may want sunglasses or water for the morning ceremony.</p></article>
+        </div>
+      </section>
+
+      <section class="map-section section-wrap reveal" id="map" aria-labelledby="map-title">
+        <div class="section-heading">
+          <p class="eyebrow">Wedding Weekend Map</p>
+          <h2 id="map-title">Across Kauai's North Shore.</h2>
+          <p>
+            Our wedding weekend takes place across Kauai's North Shore, from
+            Tunnels Beach to Princeville and Hanalei Bay.
+          </p>
+        </div>
+        <div class="map-card" aria-label="Illustrated map of wedding weekend locations">
+          <!-- MAP LABELS: update labels here if locations change. -->
+          <svg viewBox="0 0 900 560" role="img" aria-labelledby="map-svg-title">
+            <title id="map-svg-title">Decorative map of Tunnels Beach, Hanalei, Princeville, 1 Hotel Hanalei Bay, and the Welcome Rehearsal.</title>
+            <path class="water" d="M0 0h900v560H0z"></path>
+            <path class="island" d="M82 284c74-98 173-148 296-151 95-2 142 37 209 29 86-10 132-75 210-48 60 21 64 89 31 141-45 71-139 84-204 132-82 60-112 118-219 119-123 1-198-66-269-91-77-27-101-70-54-131z"></path>
+            <path class="coast" d="M116 305c75-72 159-109 254-112 106-3 153 39 230 25 71-13 119-53 171-37"></path>
+            <path class="road" d="M220 326c95-54 173-75 248-62 75 12 126 52 201 39"></path>
+            <path class="ridge" d="M252 209l42-48 37 43 40-55 55 63 43-45 38 55"></path>
+            <g class="marker tunnels"><circle cx="210" cy="321" r="13"></circle><text x="164" y="372">Tunnels Beach</text></g>
+            <g class="marker hanalei"><circle cx="492" cy="276" r="13"></circle><text x="452" y="245">Hanalei</text></g>
+            <g class="marker hotel"><circle cx="575" cy="297" r="13"></circle><text x="535" y="350">1 Hotel Hanalei Bay</text></g>
+            <g class="marker princeville"><circle cx="673" cy="253" r="13"></circle><text x="640" y="220">Princeville</text></g>
+            <g class="marker welcome-map"><circle cx="711" cy="286" r="13"></circle><text x="648" y="330">Welcome Rehearsal</text></g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="gallery section-wrap reveal" aria-labelledby="gallery-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">North Shore Inspiration</p>
+          <h2 id="gallery-title">Soft coastline, green mountains, and slow mornings.</h2>
+        </div>
+        <!-- GALLERY IMAGES: replace these generated placeholders with your own Kauai/couple photos later. -->
+        <div class="gallery-grid">
+          <figure class="wide">
+            <img src="assets/kauai-hero.png" alt="Kauai sunrise coastline.">
+            <figcaption>Tunnels Beach sunrise</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/princeville-lanai.png" alt="Princeville lanai and tropical views.">
+            <figcaption>Princeville overlook</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/north-shore-details.png" alt="North Shore tropical greenery and beach path.">
+            <figcaption>Tropical greenery</figcaption>
+          </figure>
+          <figure class="wide">
+            <img src="assets/hero-tropical-boho.png" alt="Oceanfront tropical ceremony inspiration.">
+            <figcaption>Hanalei Bay light</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="scripture reveal" aria-labelledby="scripture-title">
+        <h2 id="scripture-title">“Many waters cannot quench love; rivers cannot sweep it away.”</h2>
+        <p>Song of Solomon 8:7</p>
+      </section>
+
+      <section class="recommendations section-wrap reveal" aria-labelledby="recs-title">
+        <div class="section-heading centered">
+          <p class="eyebrow">Things to Do</p>
+          <h2 id="recs-title">A few North Shore favorites to add later.</h2>
+        </div>
+        <!-- RECOMMENDATIONS: replace placeholder copy with real favorites when ready. -->
+        <div class="rec-grid">
+          <article><h3>Beaches</h3><p>Add favorite beaches and morning swim spots.</p></article>
+          <article><h3>Coffee</h3><p>Add coffee shops for slow mornings in Hanalei.</p></article>
+          <article><h3>Food</h3><p>Add casual dinner, lunch, and shave ice favorites.</p></article>
+          <article><h3>Hikes</h3><p>Add trail notes and safety reminders for guests.</p></article>
+          <article><h3>Hanalei Favorites</h3><p>Add shops, views, and easy afternoon ideas.</p></article>
+          <article><h3>North Shore Activities</h3><p>Add surf lessons, boat days, or scenic drives.</p></article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>Bri & Liam | 2026</p>
+    <footer class="site-footer">
+      <p class="footer-names">Bri & Liam</p>
+      <p>July 10 · North Shore Kauai</p>
+      <p>We cannot wait to celebrate with you.</p>
     </footer>
   </body>
 </html>
