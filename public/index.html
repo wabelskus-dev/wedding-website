@@ -69,284 +69,204 @@
     </svg>
 
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Bri and Liam home">Bri & Liam</a>
-      <nav aria-label="Primary navigation">
-        <a href="#home">Home</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#venue">Venue</a>
-        <a href="#faqs">FAQs</a>
-        <a href="#contacts">Contacts</a>
+      <button class="brand tab-button" type="button" data-tab="home" aria-label="Bri and Liam home">Bri & Liam</button>
+      <nav aria-label="Primary navigation" role="tablist">
+        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="home-panel" data-tab="home">Home</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="schedule-panel" data-tab="schedule">Schedule</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="venue-panel" data-tab="venue">Venue</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="faqs-panel" data-tab="faqs">FAQs</button>
+        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="contacts-panel" data-tab="contacts">Contacts</button>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero page-section" id="home" aria-labelledby="hero-title">
-        <div class="hero-art" aria-hidden="true">
-          <svg class="hero-motif hero-shell-one"><use href="#motif-shell"></use></svg>
-          <svg class="hero-motif hero-turtle"><use href="#motif-turtle"></use></svg>
-          <svg class="hero-motif hero-flower"><use href="#motif-hibiscus"></use></svg>
-          <svg class="hero-motif hero-flamingo"><use href="#motif-flamingo"></use></svg>
-          <svg class="hero-motif hero-starfish"><use href="#motif-starfish"></use></svg>
-          <svg class="hero-motif hero-waterfall"><use href="#motif-waterfall"></use></svg>
-        </div>
-        <div class="hero-content reveal">
-          <p class="kicker">Tropical flowers · sea shells · sunrise on Kauai</p>
-          <h1 id="hero-title">Bri & Liam</h1>
-          <!-- WEDDING DATE / LOCATION: update here if plans change. -->
-          <p class="hero-meta">July 10 · Tunnels Beach, North Shore Kauai</p>
-        </div>
-      </section>
-
-      <section class="intro section-wrap reveal" aria-labelledby="intro-title">
-        <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>Welcome</p>
-        <h2 id="intro-title">We are so grateful to celebrate this moment with the people closest to us.</h2>
-        <div class="intro-copy">
-          <p>
-            We are keeping our wedding small and meaningful, surrounded by the
-            people closest to us. Thank you for making the trip to celebrate
-            with us in Kauai.
-          </p>
-        </div>
-        <figure class="welcome-detail">
-          <!-- WELCOME DETAIL PHOTO: replace or remove this if you want a different personal Kauai detail. -->
-          <img src="assets/tunnels-surfboards-chicken.jpeg" alt="Surfboards and a rooster near Tunnels Beach on Kauai.">
-        </figure>
-      </section>
-
-      <section class="details-panel section-wrap reveal page-section" id="venue" aria-labelledby="ceremony-title">
-        <div class="section-heading">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Venue</p>
-          <h2 id="ceremony-title">Meet us at sunrise.</h2>
-          <p>
-            Guests should plan to arrive around 6:45 AM. There is about a
-            0.5-mile walk along the beach from the parking lot to the ceremony
-            site, so please give yourself a little extra time.
-          </p>
-        </div>
-
-        <!-- CEREMONY DETAILS: update date, time, address/meeting point, and transportation notes here. -->
-        <div class="info-grid">
-          <article>
-            <span>Date</span>
-            <strong>July 10</strong>
-          </article>
-          <article>
-            <span>Time</span>
-            <strong>7:00 AM</strong>
-            <p>Guests should plan to arrive around 6:45 AM.</p>
-          </article>
-          <article>
-            <span>Location</span>
-            <strong>Tunnels Beach</strong>
-            <p>North Shore Kauai</p>
-          </article>
-          <article>
-            <span>Meeting Point</span>
-            <strong>North side of Tunnels Beach</strong>
-          </article>
-          <article>
-            <span>Officiant</span>
-            <strong>Bri's best friend</strong>
-          </article>
-          <article>
-            <span>Transportation</span>
-            <strong>Carpooling is encouraged</strong>
-            <p>Plan for a 0.5-mile beach walk from the parking lot.</p>
-          </article>
+      <section class="tab-panel is-active" id="home-panel" role="tabpanel" data-panel="home">
+        <div class="title-slide">
+          <div class="hero-art" aria-hidden="true">
+            <svg class="hero-motif hero-shell-one"><use href="#motif-shell"></use></svg>
+            <svg class="hero-motif hero-turtle"><use href="#motif-turtle"></use></svg>
+            <svg class="hero-motif hero-flower"><use href="#motif-hibiscus"></use></svg>
+            <svg class="hero-motif hero-flamingo"><use href="#motif-flamingo"></use></svg>
+            <svg class="hero-motif hero-starfish"><use href="#motif-starfish"></use></svg>
+          </div>
+          <div class="title-copy reveal">
+            <p class="kicker">Tunnels Beach · North Shore Kauai</p>
+            <h1 id="hero-title">Bri and Liam's Wedding</h1>
+            <!-- HOME PHOTO: replace this image in assets/ if you want a different title photo. -->
+            <img class="title-photo" src="assets/bri-liam-title-photo.jpeg" alt="Bri and Liam standing together on the beach at sunset.">
+            <p class="hero-meta">July 10 · Sunrise ceremony · Celebration brunch to follow</p>
+          </div>
         </div>
       </section>
 
-      <section class="feature section-wrap reveal" id="brunch" aria-labelledby="brunch-title">
-        <div>
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-hibiscus"></use></svg>After the ceremony</p>
-          <h2 id="brunch-title">Celebration brunch at 1 Hotel Hanalei Bay.</h2>
-        </div>
-        <!-- BRUNCH DETAILS: update time/location if needed. -->
-        <div class="feature-card">
-          <p class="large-detail">9:15 AM</p>
-          <p>
-            After the ceremony, we will continue the celebration with brunch at
-            1 Hotel Hanalei Bay. All guests are invited to join us.
-          </p>
-        </div>
-      </section>
-
-      <section class="welcome-event reveal page-section" id="schedule" aria-labelledby="welcome-title">
-        <div class="welcome-image">
-          <!-- WELCOME IMAGE: replace this with a real Kauai or rehearsal photo later. -->
-          <img src="assets/princeville-rehearsal-view.png" alt="A Princeville view with lush greenery, homes, ocean, and North Shore mountains.">
-        </div>
-        <div class="welcome-copy">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-waterfall"></use></svg>July 9 · 2:00 PM</p>
-          <h2 id="welcome-title">Welcome Rehearsal</h2>
-          <!-- WELCOME ADDRESS: replace "address to be added" when ready. -->
-          <p>
-            Join us the day before the ceremony for a relaxed Welcome Rehearsal
-            at the Belskus residence in Princeville, overlooking the North
-            Shore.
-          </p>
-          <p class="small-note">
-            Expect a casual dinner party, beautiful views, and time together
-            before the early morning ceremony.
-          </p>
-          <dl>
-            <div>
-              <dt>Location</dt>
-              <dd>Belskus residence</dd>
-            </div>
-            <div>
-              <dt>Address</dt>
-              <dd>4221 Kekuanaoa Ln<br>Princeville, HI</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="section-wrap reveal" id="weekend" aria-labelledby="weekend-title">
-        <div class="section-heading centered">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-starfish"></use></svg>Weekend Schedule</p>
-          <h2 id="weekend-title">A simple rhythm for two days together.</h2>
-        </div>
-        <!-- SCHEDULE: update times and descriptions here. -->
-        <div class="timeline">
-          <article>
-            <span class="date">July 9</span>
-            <div>
-              <p class="time">2:00 PM</p>
+      <section class="tab-panel" id="schedule-panel" role="tabpanel" data-panel="schedule" hidden>
+        <div class="section-wrap reveal">
+          <div class="section-heading centered">
+            <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-starfish"></use></svg>Schedule</p>
+            <h2>Wedding Weekend</h2>
+          </div>
+          <div class="schedule-strip" aria-label="Brief wedding weekend schedule">
+            <span><strong>July 9</strong> Welcome Rehearsal</span>
+            <span><strong>July 10</strong> Ceremony</span>
+            <span><strong>July 10</strong> Brunch</span>
+          </div>
+          <div class="schedule-card-grid">
+            <article>
+              <p class="date">July 9 · 2:00 PM</p>
               <h3>Welcome Rehearsal</h3>
-              <p>Casual dinner party at a private residence overlooking Princeville and Hanalei.</p>
+              <p>Join us for a relaxed dinner party at the Belskus residence in Princeville, overlooking the North Shore.</p>
+              <dl>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Belskus residence</dd>
+                </div>
+                <div>
+                  <dt>Address</dt>
+                  <dd>4221 Kekuanaoa Ln<br>Princeville, HI</dd>
+                </div>
+              </dl>
+            </article>
+            <article>
+              <p class="date">July 10 · 7:00 AM</p>
+              <h3>Ceremony</h3>
+              <p>Please plan to arrive around 6:45 AM. There is about a 0.5-mile walk along the beach from the parking lot to the ceremony site.</p>
+              <dl>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Tunnels Beach</dd>
+                </div>
+                <div>
+                  <dt>Meeting Point</dt>
+                  <dd>North side of Tunnels Beach</dd>
+                </div>
+              </dl>
+            </article>
+            <article>
+              <p class="date">July 10 · 9:15 AM</p>
+              <h3>Brunch</h3>
+              <p>After the ceremony, we will continue the celebration with brunch. All guests are invited to join us.</p>
+              <dl>
+                <div>
+                  <dt>Location</dt>
+                  <dd>1 Hotel Hanalei Bay</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="venue-panel" role="tabpanel" data-panel="venue" hidden>
+        <div class="section-wrap reveal">
+          <div class="section-heading centered">
+            <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Venue</p>
+            <h2>Ceremony at Tunnels Beach.</h2>
+            <p>
+              Please meet us on the north side of Tunnels Beach for a simple sunrise ceremony.
+              Parking can be limited, so carpooling and arriving early are encouraged.
+            </p>
+          </div>
+          <div class="venue-layout">
+            <div class="map-card ceremony-map-card" aria-label="Ceremony map for Tunnels Beach">
+              <!-- CEREMONY MAP: replace this image if parking or meeting details change. -->
+              <img src="assets/tunnels-ceremony-map.png" alt="Illustrated ceremony map for Tunnels Beach showing the north side ceremony location and Haena Beach Park parking.">
             </div>
-          </article>
-          <article>
-            <span class="date">July 10</span>
-            <div>
-              <p class="time">6:45 AM</p>
-              <h3>Guest arrival at Tunnels Beach</h3>
-              <p>Plan extra time for parking and the 0.5-mile beach walk to the ceremony site.</p>
+            <div class="info-grid">
+              <article>
+                <span>Arrival</span>
+                <strong>6:45 AM</strong>
+                <p>Please give yourself time for parking and walking.</p>
+              </article>
+              <article>
+                <span>Ceremony</span>
+                <strong>7:00 AM</strong>
+                <p>Sunrise ceremony on the north side of Tunnels Beach.</p>
+              </article>
+              <article>
+                <span>Walk</span>
+                <strong>0.5 mile</strong>
+                <p>Plan for a beach walk from the parking lot to the ceremony site.</p>
+              </article>
+              <article>
+                <span>Transportation</span>
+                <strong>Carpooling encouraged</strong>
+                <p>North Shore travel and parking can take longer than expected.</p>
+              </article>
+              <article>
+                <span>Officiant</span>
+                <strong>Bri's best friend</strong>
+              </article>
+              <article>
+                <span>Meeting Point</span>
+                <strong>North side of Tunnels Beach</strong>
+              </article>
             </div>
-          </article>
-          <article>
-            <span class="date">July 10</span>
-            <div>
-              <p class="time">7:00 AM</p>
-              <h3>Sunrise ceremony</h3>
-              <p>A small, meaningful ceremony at Tunnels Beach.</p>
-            </div>
-          </article>
-          <article>
-            <span class="date">July 10</span>
-            <div>
-              <p class="time">9:15 AM</p>
-              <h3>Celebration brunch</h3>
-              <p>All guests are invited to 1 Hotel Hanalei Bay.</p>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="dress-code section-wrap reveal" aria-labelledby="dress-title">
-        <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-fish"></use></svg>Dress Code</p>
-        <h2 id="dress-title">Beach-friendly neutrals and florals.</h2>
-        <p>
-          Think linen, soft earth tones, muted colors, tropical prints, and
-          comfortable shoes for the sand. Please avoid wearing white.
-        </p>
-        <p>
-          The ceremony will be on or near the beach, so skip heels or anything
-          difficult to walk in on sand. Barefoot is totally okay, and
-          comfortable beach-friendly shoes are welcome too.
-        </p>
-      </section>
-
-      <section class="faqs section-wrap reveal page-section" id="faqs" aria-labelledby="faqs-title">
-        <div class="section-heading centered">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>FAQs</p>
-          <h2 id="faqs-title">A few helpful notes.</h2>
-        </div>
-        <div class="faq-grid">
-          <article>
-            <h3>When should we arrive?</h3>
-            <p>Guests should plan to arrive around 6:45 AM so there is enough time for parking and the walk to the ceremony site.</p>
-          </article>
-          <article>
-            <h3>How far is the walk?</h3>
-            <p>There is about a 0.5-mile walk along the beach from the parking lot to the ceremony site.</p>
-          </article>
-          <article>
-            <h3>Should we carpool?</h3>
-            <p>Yes, please carpool when possible. Parking near Tunnels Beach can be limited.</p>
-          </article>
-          <article>
-            <h3>What shoes should I wear?</h3>
-            <p>Beach-friendly shoes are recommended, and barefoot is totally okay for the ceremony.</p>
-          </article>
-          <article>
-            <h3>What should I bring?</h3>
-            <p>Sunglasses or water may be helpful for the morning beach ceremony.</p>
-          </article>
-          <article>
-            <h3>What should I wear?</h3>
-            <p>Beach-friendly neutrals and florals are perfect. Please avoid wearing white.</p>
-          </article>
+      <section class="tab-panel" id="faqs-panel" role="tabpanel" data-panel="faqs" hidden>
+        <div class="section-wrap reveal">
+          <div class="section-heading centered">
+            <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>FAQs</p>
+            <h2>A few helpful notes.</h2>
+          </div>
+          <div class="faq-grid">
+            <article>
+              <h3>When should we arrive?</h3>
+              <p>Guests should plan to arrive around 6:45 AM so there is enough time for parking and the walk to the ceremony site.</p>
+            </article>
+            <article>
+              <h3>How far is the walk?</h3>
+              <p>There is about a 0.5-mile walk along the beach from the parking lot to the ceremony site.</p>
+            </article>
+            <article>
+              <h3>Should we carpool?</h3>
+              <p>Yes, please carpool when possible. Parking near Tunnels Beach can be limited.</p>
+            </article>
+            <article>
+              <h3>What shoes should I wear?</h3>
+              <p>Beach-friendly shoes are recommended, and barefoot is totally okay for the ceremony.</p>
+            </article>
+            <article>
+              <h3>What should I bring?</h3>
+              <p>Sunglasses or water may be helpful for the morning beach ceremony.</p>
+            </article>
+            <article>
+              <h3>What should I wear?</h3>
+              <p>Beach-friendly neutrals and florals are perfect. Please avoid wearing white.</p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="map-section section-wrap reveal" id="map" aria-labelledby="map-title">
-        <div class="section-heading">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Ceremony Map</p>
-          <h2 id="map-title">Ceremony at Tunnels Beach.</h2>
-          <p>
-            Please meet us on the north side of Tunnels Beach just before
-            7:00 AM. The map below shows the ceremony area and nearby parking.
-          </p>
+      <section class="tab-panel" id="contacts-panel" role="tabpanel" data-panel="contacts" hidden>
+        <div class="attendee-contacts section-wrap reveal">
+          <div class="section-heading centered">
+            <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-flamingo"></use></svg>Contacts</p>
+            <h2 id="contacts-title">Attendee Contacts</h2>
+          </div>
+          <!-- ATTENDEE CONTACTS: update names/numbers here as needed. -->
+          <div class="contact-grid">
+            <article><span>Joe</span><a href="tel:+14807739294">(480) 773-9294</a></article>
+            <article><span>Mikey</span><a href="tel:+14803384847">(480) 338-4847</a></article>
+            <article><span>Gabby</span><a href="tel:+14807475272">(480) 747-5272</a></article>
+            <article><span>Brady</span><a href="tel:+14806779802">(480) 677-9802</a></article>
+            <article><span>Peter</span><a href="tel:+16025356548">(602) 535-6548</a></article>
+            <article><span>Stu</span><a href="tel:+14808248291">(480) 824-8291</a></article>
+            <article><span>Connie</span><a href="tel:+14808248297">(480) 824-8297</a></article>
+            <article><span>Sammy</span><a href="tel:+14806770804">(480) 677-0804</a></article>
+            <article><span>Rachel</span><a href="tel:+14804664386">(480) 466-4386</a></article>
+            <article><span>Maddie</span><a href="tel:+14803385654">(480) 338-5654</a></article>
+            <article><span>Erin</span><a href="tel:+19512557555">(951) 255-7555</a></article>
+            <article><span>Kylie</span><a href="tel:+447765758380">+44 7765 758380</a></article>
+            <article><span>Sheri</span><a href="tel:+18584148650">(858) 414-8650</a></article>
+            <article><span>Bri</span><a href="tel:+19519727779">(951) 972-7779</a></article>
+            <article><span>Liam</span><a href="tel:+14808248294">(480) 824-8294</a></article>
+            <article><span>John</span><a href="tel:+19512193408">(951) 219-3408</a></article>
+          </div>
+          <p class="contact-note">* No prank calls. We're talking to you, Kylie.</p>
         </div>
-        <div class="map-card ceremony-map-card" aria-label="Ceremony map for Tunnels Beach">
-          <!-- CEREMONY MAP: replace this image if parking or meeting details change. -->
-          <img src="assets/tunnels-ceremony-map.png" alt="Illustrated ceremony map for Tunnels Beach showing the north side ceremony location and Haena Beach Park parking.">
-        </div>
-      </section>
-
-      <section class="recommendations section-wrap reveal" aria-labelledby="recs-title">
-        <div class="section-heading centered">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-fish"></use></svg>Things to Do</p>
-          <h2 id="recs-title">A few North Shore favorites to add later.</h2>
-        </div>
-        <!-- RECOMMENDATIONS: replace placeholder copy with real favorites when ready. -->
-        <div class="rec-grid">
-          <article><h3>Beaches</h3><p>Anini Beach<br>Hanalei Beach<br>Tunnels Beach</p></article>
-          <article><h3>Coffee</h3><p>Add coffee shops for slow mornings in Hanalei.</p></article>
-          <article><h3>Food</h3><p>Add casual dinner, lunch, and shave ice favorites.</p></article>
-          <article><h3>Hikes</h3><p>Add trail notes and safety reminders for guests.</p></article>
-          <article><h3>Hanalei Favorites</h3><p>Add shops, views, and easy afternoon ideas.</p></article>
-          <article><h3>North Shore Activities</h3><p>Add surf lessons, boat days, or scenic drives.</p></article>
-        </div>
-      </section>
-
-      <section class="attendee-contacts section-wrap reveal page-section" id="contacts" aria-labelledby="contacts-title">
-        <div class="section-heading centered">
-          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-flamingo"></use></svg>Contacts</p>
-          <h2 id="contacts-title">Attendee Contacts</h2>
-        </div>
-        <!-- ATTENDEE CONTACTS: update names/numbers here as needed. -->
-        <div class="contact-grid">
-          <article><span>Joe</span><a href="tel:+14807739294">(480) 773-9294</a></article>
-          <article><span>Mikey</span><a href="tel:+14803384847">(480) 338-4847</a></article>
-          <article><span>Gabby</span><a href="tel:+14807475272">(480) 747-5272</a></article>
-          <article><span>Brady</span><a href="tel:+14806779802">(480) 677-9802</a></article>
-          <article><span>Peter</span><a href="tel:+16025356548">(602) 535-6548</a></article>
-          <article><span>Stu</span><a href="tel:+14808248291">(480) 824-8291</a></article>
-          <article><span>Connie</span><a href="tel:+14808248297">(480) 824-8297</a></article>
-          <article><span>Sammy</span><a href="tel:+14806770804">(480) 677-0804</a></article>
-          <article><span>Rachel</span><a href="tel:+14804664386">(480) 466-4386</a></article>
-          <article><span>Maddie</span><a href="tel:+14803385654">(480) 338-5654</a></article>
-          <article><span>Erin</span><a href="tel:+19512557555">(951) 255-7555</a></article>
-          <article><span>Kylie</span><a href="tel:+447765758380">+44 7765 758380</a></article>
-          <article><span>Sheri</span><a href="tel:+18584148650">(858) 414-8650</a></article>
-          <article><span>Bri</span><a href="tel:+19519727779">(951) 972-7779</a></article>
-          <article><span>Liam</span><a href="tel:+14808248294">(480) 824-8294</a></article>
-          <article><span>John</span><a href="tel:+19512193408">(951) 219-3408</a></article>
-        </div>
-        <p class="contact-note">* No prank calls. We're talking to you, Kylie.</p>
       </section>
     </main>
 
@@ -355,5 +275,31 @@
       <p>July 10 · North Shore Kauai</p>
       <p>We cannot wait to celebrate with you.</p>
     </footer>
+    <script>
+      const tabButtons = document.querySelectorAll(".tab-button");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+
+      function showTab(tabName) {
+        tabButtons.forEach((button) => {
+          const isActive = button.dataset.tab === tabName;
+          button.classList.toggle("is-active", isActive);
+          if (button.getAttribute("role") === "tab") {
+            button.setAttribute("aria-selected", String(isActive));
+          }
+        });
+
+        tabPanels.forEach((panel) => {
+          const isActive = panel.dataset.panel === tabName;
+          panel.classList.toggle("is-active", isActive);
+          panel.hidden = !isActive;
+        });
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => showTab(button.dataset.tab));
+      });
+    </script>
   </body>
 </html>
