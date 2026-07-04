@@ -113,20 +113,19 @@ h3 {
 
 .site-header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 16px;
+  left: 50%;
+  right: auto;
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 16px clamp(18px, 4vw, 54px);
+  justify-content: center;
+  width: min(calc(100% - 28px), 560px);
+  padding: 0;
   color: var(--deep-green);
-  background:
-    linear-gradient(180deg, rgba(255, 253, 248, 0.88), rgba(255, 253, 248, 0.56));
-  border-bottom: 1px solid rgba(31, 67, 55, 0.08);
-  backdrop-filter: blur(14px);
+  background: transparent;
+  border: 0;
+  transform: translateX(-50%);
 }
 
 .brand {
@@ -142,8 +141,15 @@ h3 {
 nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 8px;
+  width: auto;
+  padding: 7px;
+  background: rgba(255, 253, 248, 0.46);
+  border: 1px solid rgba(31, 67, 55, 0.08);
+  border-radius: 999px;
+  box-shadow: 0 12px 34px rgba(96, 71, 56, 0.08);
+  backdrop-filter: blur(14px);
   font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -151,8 +157,8 @@ nav {
 
 nav button {
   padding: 8px 12px;
-  background: rgba(255, 253, 248, 0.42);
-  border: 1px solid rgba(31, 67, 55, 0.12);
+  background: rgba(255, 253, 248, 0.2);
+  border: 1px solid transparent;
   border-radius: 999px;
   cursor: pointer;
   opacity: 0.9;
@@ -172,8 +178,8 @@ nav button.is-active {
 
 .tab-panel {
   display: none;
-  min-height: calc(100svh - 72px);
-  padding-top: 72px;
+  min-height: 100svh;
+  padding-top: 0;
 }
 
 .tab-panel.is-active {
@@ -182,7 +188,7 @@ nav button.is-active {
 
 .title-slide {
   position: relative;
-  min-height: calc(100svh - 72px);
+  min-height: 100svh;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
   overflow: hidden;
@@ -207,14 +213,14 @@ nav button.is-active {
 
 .title-photo-panel {
   position: relative;
-  min-height: calc(100svh - 72px);
+  min-height: 100svh;
   overflow: hidden;
 }
 
 .title-photo-panel img {
   width: 100%;
   height: 100%;
-  min-height: calc(100svh - 72px);
+  min-height: 100svh;
   object-fit: cover;
   object-position: center;
 }
@@ -254,7 +260,7 @@ nav button.is-active {
 
 .title-invite {
   position: relative;
-  min-height: calc(100svh - 72px);
+  min-height: 100svh;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -822,24 +828,6 @@ figure {
   text-align: center;
 }
 
-.site-footer {
-  padding: 56px 20px 68px;
-  background: var(--deep-green);
-  text-align: center;
-}
-
-.site-footer p {
-  margin-bottom: 8px;
-  color: rgba(255, 253, 248, 0.78);
-}
-
-.footer-names {
-  color: var(--warm-white) !important;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 3rem;
-  font-style: italic;
-}
-
 .reveal {
   animation: fadeUp 0.9s ease both;
 }
@@ -868,7 +856,7 @@ figure {
 
 @media (max-width: 860px) {
   .site-header {
-    align-items: flex-start;
+    align-items: center;
   }
 
   nav {
@@ -916,13 +904,15 @@ figure {
 
 @media (max-width: 560px) {
   .site-header {
-    align-items: flex-start;
-    padding: 14px 16px;
+    top: 10px;
+    align-items: center;
+    width: min(calc(100% - 16px), 420px);
+    padding: 0;
   }
 
   nav {
-    justify-content: flex-end;
-    gap: 8px 12px;
+    justify-content: center;
+    gap: 6px;
     font-size: 0.68rem;
   }
 
@@ -931,11 +921,11 @@ figure {
   }
 
   .tab-panel {
-    padding-top: 118px;
+    padding-top: 0;
   }
 
   .title-slide {
-    min-height: calc(100svh - 118px);
+    min-height: 100svh;
   }
 
   .title-copy h1 {
