@@ -69,17 +69,17 @@
     </svg>
 
     <header class="site-header">
-      <nav aria-label="Primary navigation" role="tablist">
-        <button class="tab-button is-active" type="button" role="tab" aria-selected="true" aria-controls="home-panel" data-tab="home">Home</button>
-        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="schedule-panel" data-tab="schedule">Schedule</button>
-        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="venue-panel" data-tab="venue">Venue</button>
-        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="faqs-panel" data-tab="faqs">FAQs</button>
-        <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="contacts-panel" data-tab="contacts">Contacts</button>
+      <nav aria-label="Primary navigation">
+        <button class="tab-button is-active" type="button" data-tab="home">Home</button>
+        <button class="tab-button" type="button" data-tab="schedule">Schedule</button>
+        <button class="tab-button" type="button" data-tab="venue">Venue</button>
+        <button class="tab-button" type="button" data-tab="faqs">FAQs</button>
+        <button class="tab-button" type="button" data-tab="contacts">Contacts</button>
       </nav>
     </header>
 
     <main id="main">
-      <section class="tab-panel is-active" id="home-panel" role="tabpanel" data-panel="home">
+      <section class="page-panel title-panel" id="home-panel" data-panel="home">
         <div class="title-slide">
           <figure class="title-photo-panel">
             <!-- HOME PHOTO: replace this image in assets/ if you want a different title photo. -->
@@ -99,7 +99,7 @@
         </div>
       </section>
 
-      <section class="tab-panel" id="schedule-panel" role="tabpanel" data-panel="schedule" hidden>
+      <section class="page-panel content-panel" id="schedule-panel" data-panel="schedule">
         <div class="section-wrap reveal">
           <div class="section-heading centered">
             <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-starfish"></use></svg>Schedule</p>
@@ -156,13 +156,13 @@
         </div>
       </section>
 
-      <section class="tab-panel" id="venue-panel" role="tabpanel" data-panel="venue" hidden>
+      <section class="page-panel content-panel" id="venue-panel" data-panel="venue">
         <div class="section-wrap reveal">
           <div class="section-heading centered">
             <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Venue</p>
             <h2>Ceremony at Tunnels Beach.</h2>
             <p>
-              Please meet us at Tunnels Beach for a simple sunrise ceremony.
+              Please meet us at Tunnels Beach for a morning ceremony.
               Parking can be limited, so carpooling is encouraged. Please do not arrive
               earlier than 6:45 AM, as Bri and Liam will be sharing private vows beforehand.
             </p>
@@ -207,7 +207,7 @@
         </div>
       </section>
 
-      <section class="tab-panel" id="faqs-panel" role="tabpanel" data-panel="faqs" hidden>
+      <section class="page-panel content-panel" id="faqs-panel" data-panel="faqs">
         <div class="section-wrap reveal">
           <div class="section-heading centered">
             <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>FAQs</p>
@@ -242,7 +242,7 @@
         </div>
       </section>
 
-      <section class="tab-panel" id="contacts-panel" role="tabpanel" data-panel="contacts" hidden>
+      <section class="page-panel content-panel" id="contacts-panel" data-panel="contacts">
         <div class="attendee-contacts section-wrap reveal">
           <div class="section-heading centered">
             <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-flamingo"></use></svg>Contacts</p>
@@ -274,28 +274,35 @@
 
     <script>
       const tabButtons = document.querySelectorAll(".tab-button");
-      const tabPanels = document.querySelectorAll(".tab-panel");
+      const pagePanels = document.querySelectorAll(".page-panel");
 
-      function showTab(tabName) {
+      function setActiveButton(tabName) {
         tabButtons.forEach((button) => {
           const isActive = button.dataset.tab === tabName;
           button.classList.toggle("is-active", isActive);
-          if (button.getAttribute("role") === "tab") {
-            button.setAttribute("aria-selected", String(isActive));
-          }
         });
+      }
 
-        tabPanels.forEach((panel) => {
-          const isActive = panel.dataset.panel === tabName;
-          panel.classList.toggle("is-active", isActive);
-          panel.hidden = !isActive;
-        });
-
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      function goToSection(tabName) {
+        const panel = document.querySelector(`[data-panel="${tabName}"]`);
+        if (!panel) return;
+        setActiveButton(tabName);
+        panel.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       tabButtons.forEach((button) => {
-        button.addEventListener("click", () => showTab(button.dataset.tab));
+        button.addEventListener("click", () => goToSection(button.dataset.tab));
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveButton(visible.target.dataset.panel);
+      }, { threshold: [0.35, 0.6] });
+
+      pagePanels.forEach((panel) => {
+        observer.observe(panel);
       });
     </script>
   </body>
