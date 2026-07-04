@@ -514,6 +514,14 @@ figure {
   text-underline-offset: 3px;
 }
 
+.contact-note {
+  margin: 18px 0 0;
+  color: var(--taupe);
+  font-size: 0.86rem;
+  font-style: italic;
+  text-align: center;
+}
+
 .site-footer {
   padding: 56px 20px 68px;
   background: var(--deep-green);
