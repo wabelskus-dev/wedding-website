@@ -384,7 +384,8 @@ dd {
 }
 
 .note-grid,
-.rec-grid {
+.rec-grid,
+.contact-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
@@ -475,6 +476,44 @@ figure {
   text-transform: uppercase;
 }
 
+.attendee-contacts {
+  border-top: 1px solid var(--line);
+}
+
+.contact-grid article {
+  padding: 20px;
+  background: rgba(255, 253, 248, 0.68);
+  border: 1px solid rgba(157, 133, 108, 0.22);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 32px rgba(93, 74, 59, 0.06);
+}
+
+.contact-grid span,
+.contact-grid a {
+  display: block;
+}
+
+.contact-grid span {
+  margin-bottom: 7px;
+  color: var(--deep-green);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.contact-grid a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.contact-grid a:hover,
+.contact-grid a:focus-visible {
+  color: var(--olive);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .site-footer {
   padding: 56px 20px 68px;
   background: var(--deep-green);
@@ -544,7 +583,8 @@ figure {
 
   .info-grid,
   .note-grid,
-  .rec-grid {
+  .rec-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
