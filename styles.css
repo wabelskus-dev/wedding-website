@@ -283,61 +283,34 @@ nav button.is-active {
 .title-copy {
   display: grid;
   justify-items: center;
+  width: min(440px, 100%);
+  margin: 0 auto;
 }
 
 .invite-floral {
-  width: min(300px, 72%);
-  margin: 0 auto clamp(42px, 8vw, 86px);
-  overflow: visible;
-}
-
-.invite-floral .vine {
-  fill: none;
-  stroke: rgba(82, 109, 77, 0.42);
-  stroke-width: 3;
-  stroke-linecap: round;
-}
-
-.invite-floral .leaf {
-  fill: rgba(142, 170, 131, 0.42);
-  stroke: rgba(82, 109, 77, 0.24);
-  stroke-width: 1.4;
-}
-
-.invite-floral .leaf-two,
-.invite-floral .leaf-five,
-.invite-floral .leaf-seven {
-  fill: rgba(116, 183, 174, 0.3);
-}
-
-.invite-floral .fruit {
-  fill: rgba(82, 109, 77, 0.58);
-}
-
-.invite-floral .fruit-two {
-  fill: rgba(116, 183, 174, 0.42);
-}
-
-.invite-floral .fruit-three,
-.invite-floral .flower {
-  fill: rgba(201, 111, 131, 0.28);
+  width: min(360px, 82%);
+  margin: 0 auto clamp(34px, 6vw, 72px);
+  mix-blend-mode: multiply;
 }
 
 .title-date {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  font-size: clamp(2.3rem, 5vw, 4.25rem);
   font-weight: 600;
+  line-height: 0.95;
+  text-align: center;
 }
 
 .title-location {
   margin-bottom: 0;
-  color: var(--muted);
+  color: var(--cocoa);
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(0.98rem, 2vw, 1.28rem);
-  font-weight: 500;
-  line-height: 1.45;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.05;
+  text-align: center;
 }
 
 .schedule-strip {
@@ -925,10 +898,6 @@ figure {
     min-height: 100svh;
   }
 
-  .title-copy h1 {
-    font-size: 3.25rem;
-  }
-
   .title-photo-panel,
   .title-photo-panel img {
     min-height: 42svh;
@@ -948,8 +917,16 @@ figure {
   }
 
   .invite-floral {
-    width: min(230px, 78%);
-    margin-bottom: 38px;
+    width: min(255px, 82%);
+    margin-bottom: 32px;
+  }
+
+  .title-date {
+    font-size: clamp(2.25rem, 12vw, 3.35rem);
+  }
+
+  .title-location {
+    font-size: clamp(1.55rem, 7vw, 2.15rem);
   }
 
   .hero {
