@@ -34,6 +34,40 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
+    <!-- DECORATIVE MOTIFS: reusable beach/tropical icons used in headings and the hero. -->
+    <svg class="motif-sprite" aria-hidden="true" focusable="false">
+      <symbol id="motif-shell" viewBox="0 0 48 48">
+        <path d="M8 34c2-14 9-22 16-22s14 8 16 22" />
+        <path d="M12 34h24M24 12v22M16 17l6 17M32 17l-6 17M10 39h28" />
+      </symbol>
+      <symbol id="motif-turtle" viewBox="0 0 48 48">
+        <ellipse cx="24" cy="25" rx="13" ry="10" />
+        <circle cx="39" cy="25" r="4" />
+        <path d="M16 17l-6-5M16 33l-6 5M31 17l5-5M31 33l5 5M18 25h12M24 15v20" />
+      </symbol>
+      <symbol id="motif-hibiscus" viewBox="0 0 48 48">
+        <path d="M24 24c-8-7-5-15 2-14 5 1 7 6 3 12 10-3 14 4 9 9-4 4-10 2-13-4 1 11-8 14-12 8-3-5 1-10 9-10-9-5-7-13 0-14 5-1 8 4 2 13Z" />
+        <circle cx="24" cy="24" r="3" />
+        <path d="M28 20l8-8" />
+      </symbol>
+      <symbol id="motif-fish" viewBox="0 0 48 48">
+        <path d="M8 24c7-9 18-10 27 0-9 10-20 9-27 0Z" />
+        <path d="M35 24l7-7v14l-7-7ZM17 20c3 3 3 5 0 8" />
+        <circle cx="14" cy="23" r="1.5" />
+      </symbol>
+      <symbol id="motif-starfish" viewBox="0 0 48 48">
+        <path d="M24 6l5 13 13-1-10 9 5 13-13-7-13 7 5-13L6 18l13 1 5-13Z" />
+      </symbol>
+      <symbol id="motif-waterfall" viewBox="0 0 48 48">
+        <path d="M14 7h20M17 12c0 8 3 11 3 18M24 12c-2 8 2 13-1 22M31 12c-1 7 2 11-2 18" />
+        <path d="M10 38c4-3 8-3 12 0s8 3 16 0" />
+      </symbol>
+      <symbol id="motif-flamingo" viewBox="0 0 48 48">
+        <path d="M31 13c-8 0-12 5-12 12 0 6 4 10 10 10 5 0 9-3 9-8 0-3-2-6-6-6h-5" />
+        <path d="M31 13c6 0 8 4 5 8M29 35v9M36 35l5 9M18 44h16" />
+      </symbol>
+    </svg>
+
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Bri and Liam home">Bri & Liam</a>
       <nav aria-label="Primary navigation">
@@ -46,11 +80,16 @@
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <!-- HERO IMAGE: replace assets/kauai-hero.png with your own optimized couple/Kauai photo later. -->
-        <img src="assets/kauai-hero.png" alt="Sunrise on Kauai's North Shore with soft sand, ocean, and green mountains.">
-        <div class="hero-shade"></div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="hero-motif hero-shell-one"><use href="#motif-shell"></use></svg>
+          <svg class="hero-motif hero-turtle"><use href="#motif-turtle"></use></svg>
+          <svg class="hero-motif hero-flower"><use href="#motif-hibiscus"></use></svg>
+          <svg class="hero-motif hero-flamingo"><use href="#motif-flamingo"></use></svg>
+          <svg class="hero-motif hero-starfish"><use href="#motif-starfish"></use></svg>
+          <svg class="hero-motif hero-waterfall"><use href="#motif-waterfall"></use></svg>
+        </div>
         <div class="hero-content reveal">
-          <p class="kicker">A sunrise celebration on the North Shore of Kauai</p>
+          <p class="kicker">Tropical flowers · sea shells · sunrise on Kauai</p>
           <h1 id="hero-title">Bri & Liam</h1>
           <!-- WEDDING DATE / LOCATION: update here if plans change. -->
           <p class="hero-meta">July 10 · Tunnels Beach, North Shore Kauai</p>
@@ -58,7 +97,7 @@
       </section>
 
       <section class="intro section-wrap reveal" aria-labelledby="intro-title">
-        <p class="eyebrow">Welcome</p>
+        <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>Welcome</p>
         <h2 id="intro-title">We are so grateful to celebrate this moment with the people closest to us.</h2>
         <div class="intro-copy">
           <p>
@@ -75,7 +114,7 @@
 
       <section class="details-panel section-wrap reveal" id="ceremony" aria-labelledby="ceremony-title">
         <div class="section-heading">
-          <p class="eyebrow">Ceremony</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Ceremony</p>
           <h2 id="ceremony-title">Meet us at sunrise.</h2>
           <p>
             Guests should plan to arrive around 6:45 AM. There is about a
@@ -118,7 +157,7 @@
 
       <section class="feature section-wrap reveal" id="brunch" aria-labelledby="brunch-title">
         <div>
-          <p class="eyebrow">After the ceremony</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-hibiscus"></use></svg>After the ceremony</p>
           <h2 id="brunch-title">Celebration brunch at 1 Hotel Hanalei Bay.</h2>
         </div>
         <!-- BRUNCH DETAILS: update time/location if needed. -->
@@ -137,7 +176,7 @@
           <img src="assets/princeville-rehearsal-view.png" alt="A Princeville view with lush greenery, homes, ocean, and North Shore mountains.">
         </div>
         <div class="welcome-copy">
-          <p class="eyebrow">July 9 · 2:00 PM</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-waterfall"></use></svg>July 9 · 2:00 PM</p>
           <h2 id="welcome-title">Welcome Rehearsal</h2>
           <!-- WELCOME ADDRESS: replace "address to be added" when ready. -->
           <p>
@@ -164,7 +203,7 @@
 
       <section class="section-wrap reveal" id="weekend" aria-labelledby="weekend-title">
         <div class="section-heading centered">
-          <p class="eyebrow">Weekend Schedule</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-starfish"></use></svg>Weekend Schedule</p>
           <h2 id="weekend-title">A simple rhythm for two days together.</h2>
         </div>
         <!-- SCHEDULE: update times and descriptions here. -->
@@ -205,7 +244,7 @@
       </section>
 
       <section class="dress-code section-wrap reveal" aria-labelledby="dress-title">
-        <p class="eyebrow">Dress Code</p>
+        <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-fish"></use></svg>Dress Code</p>
         <h2 id="dress-title">Beach-friendly neutrals and florals.</h2>
         <p>
           Think linen, soft earth tones, muted colors, tropical prints, and
@@ -220,7 +259,7 @@
 
       <section class="notes section-wrap reveal" id="kauai" aria-labelledby="notes-title">
         <div class="section-heading centered">
-          <p class="eyebrow">Kauai Notes</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-shell"></use></svg>Kauai Notes</p>
           <h2 id="notes-title">A few helpful notes for the morning.</h2>
         </div>
         <div class="note-grid">
@@ -234,7 +273,7 @@
 
       <section class="map-section section-wrap reveal" id="map" aria-labelledby="map-title">
         <div class="section-heading">
-          <p class="eyebrow">Ceremony Map</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-turtle"></use></svg>Ceremony Map</p>
           <h2 id="map-title">Ceremony at Tunnels Beach.</h2>
           <p>
             Please meet us on the north side of Tunnels Beach just before
@@ -249,7 +288,7 @@
 
       <section class="gallery section-wrap reveal" aria-label="A Little More Us">
         <div class="section-heading centered">
-          <p class="eyebrow">A Little More Us</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-flamingo"></use></svg>A Little More Us</p>
         </div>
         <!-- GALLERY IMAGES: replace or reorder these files anytime. Keep copies in assets/ and public/assets/. -->
         <div class="gallery-grid">
@@ -293,7 +332,7 @@
 
       <section class="recommendations section-wrap reveal" aria-labelledby="recs-title">
         <div class="section-heading centered">
-          <p class="eyebrow">Things to Do</p>
+          <p class="eyebrow"><svg class="motif-icon" aria-hidden="true" focusable="false"><use href="#motif-fish"></use></svg>Things to Do</p>
           <h2 id="recs-title">A few North Shore favorites to add later.</h2>
         </div>
         <!-- RECOMMENDATIONS: replace placeholder copy with real favorites when ready. -->
